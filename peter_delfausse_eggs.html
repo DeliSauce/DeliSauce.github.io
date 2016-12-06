@@ -56,8 +56,46 @@
       <p>recipe author: Peter Delfausse</p>
   </section>
 
+  <section>
+    <form action="/reviews" method="post">
+      <label for="reviewer">Reviewer Name</label>
+      <input id="reviewer" type="text" name="" value="">
+
+      <br>
+
+      <label for="rating">Rating</label>
+      1<input type="radio" name="rating" value="1" checked>
+      2<input type="radio" name="rating" value="2">
+      3<input type="radio" name="rating" value="3">
+      4<input type="radio" name="rating" value="4">
+      5<input type="radio" name="rating" value="5">
+
+      <br>
+
+      <label for="expertise">Cooking Expertise</label>
+      <select id="expertise" name="expertise">
+        <option value="Select Cooking Expertise" disabled selected>Select Cooking Expertise</option>
+        <option value="Sometimes Cook">Sometimes Cook</option>
+        <option value="Cook Everyday">Cook Everyday</option>
+        <option value="Cooking is a Hobby">Cooking is a Hobby</option>
+        <option value="Professional Chef">Professional Chef</option>
+      </select>
+
+      <br>
+
+      <label for="review">Review
+        <textarea name="review" rows="10" cols="40">  </textarea>
+      </label>
+
+      <br>
+      
+      <button type="button" name="submit_button">Submit Review</button>
+
+    </form>
+  </section>
+
   <footer>
-    <p>This recipe origanated from my mother</p>
+    <p>This recipe originated from my mother</p>
   </footer>
 </body>
 </html>
