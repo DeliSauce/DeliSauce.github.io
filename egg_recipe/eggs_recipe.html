@@ -28,19 +28,18 @@
 </head>
 <body>
 
-  <header>
+  <header class="cf">
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Appacademylogo.png/175px-Appacademylogo.png" width="50" height="50" alt="App Academy Logo">
     <nav>
-      <h1>Eggs</h1>
-      <h2>The perfect scrambled eggs</h2>
-        <ul>
-          <li><a href="#Description">Description</a></li>
-          <li><a href="#Ingredients">Ingredients</a></li>
-          <li><a href="#Directions">Directions</a></li>
-        </ul>
+      <ul>
+        <li><a href="#Description">Description</a></li>
+        <li><a href="#Ingredients">Ingredients</a></li>
+        <li><a href="#Directions">Directions</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <aside>
+  <aside class="col col-1-3">
     <h2><a name="Ingredients"/>Ingredients</h2>
 
       <ul class="ingredients-list">
@@ -50,73 +49,67 @@
       </ul>
   </aside>
 
-  <section>
-    <figure>
-      <img src="http://www.seriouseats.com/recipes/assets_c/2015/05/20150511-scrambled-eggs-vicky-wasik-17-thumb-1500xauto-423060.jpg" width="400" height="400" />
-      <figcaption>
-        <a href="https://en.wikipedia.org/wiki/Scrambled_eggs">wikipedia</a>
-      </figcaption>
-    </figure>
+
+  <div class="main-section col col-2-3">
+    <section id="main-body" >
+      <figure>
+        <img src="http://www.seriouseats.com/recipes/assets_c/2015/05/20150511-scrambled-eggs-vicky-wasik-17-thumb-1500xauto-423060.jpg" width="400" height="400" />
+        <figcaption>
+          <a href="https://en.wikipedia.org/wiki/Scrambled_eggs">wikipedia</a>
+        </figcaption>
+      </figure>
 
 
-    <h2><a name="Description"/>Description</h2>
-      <p>This is how you make the perfect scrambled eggs. Impress your
-        friends and never leave them hungry</p>
-      <p/>
+      <h2><a name="Description"/>Description</h2>
+        <p>This is how you make the perfect scrambled eggs. Impress your
+          friends and never leave them hungry</p>
+        <p/>
 
 
-    <h2><a name="Directions"/>Directions</h2>
-      <ol>
-        <li>Crack eggs into bowl</li>
-        <li>Add salt and pepper</li>
-        <li>Heat butter in frying pan on low for 3-5 minutes</li>
-        <li>Scramble eggs in bowl</li>
-        <li>Add eggs to frying pan</li>
-        <li>Scrape pan and flip eggs so that the wet egs are heated</li>
-        <li>Once the eggs are completely cooked remove from pan</li>
-        <li>Serve and enjoy!</li>
-      </ol>
-      <p>recipe author: Peter Delfausse</p>
-  </section>
+      <h2><a name="Directions"/>Directions</h2>
+        <ol class="directions-list">
+          <li>Crack eggs into bowl</li>
+          <li>Add salt and pepper</li>
+          <li>Heat butter in frying pan on low for 3-5 minutes</li>
+          <li>Scramble eggs in bowl</li>
+          <li>Add eggs to frying pan</li>
+          <li>Scrape pan and flip eggs so that the wet egs are heated</li>
+          <li>Once the eggs are completely cooked remove from pan</li>
+          <li>Serve and enjoy!</li>
+        </ol>
+        <p>recipe author: Peter Delfausse</p>
+    </section>
 
-  <section id="reviews" class="review_element">
-    <h2>Reviews</h2>
-    <form action="/reviews" method="post" id="review-form">
-      <label for="reviewer-name">Reviewer Name</label>
-      <input id="reviewer-name" type="text" name="name">
+    <section id="reviews" class="review_element col">
+      <h2>Reviews</h2>
+      <form action="/reviews" method="post" id="review-form">
+        <label for="reviewer-name">Reviewer Name</label>
+        <input id="reviewer-name" type="text" name="name">
 
-      <br>
+        1<input type="radio" name="rating" value="1" checked>
+        2<input type="radio" name="rating" value="2">
+        3<input type="radio" name="rating" value="3">
+        4<input type="radio" name="rating" value="4">
+        5<input type="radio" name="rating" value="5">
 
-      <label for="rating">Rating</label>
-      1<input type="radio" name="rating" value="1" checked>
-      2<input type="radio" name="rating" value="2">
-      3<input type="radio" name="rating" value="3">
-      4<input type="radio" name="rating" value="4">
-      5<input type="radio" name="rating" value="5">
+        <select id="expertise" name="expertise">
+          <option value="Select Cooking Expertise" disabled selected>Select Cooking Expertise</option>
+          <option value="Sometimes Cook">Sometimes Cook</option>
+          <option value="Cook Everyday">Cook Everyday</option>
+          <option value="Cooking is a Hobby">Cooking is a Hobby</option>
+          <option value="Professional Chef">Professional Chef</option>
+        </select>
 
-      <br>
+        <label for="review">
+          <textarea id="review" name="review" rows="10" cols="40">  </textarea>
+        </label>
 
-      <label for="expertise">Cooking Expertise</label>
-      <select id="expertise" name="expertise">
-        <option value="Select Cooking Expertise" disabled selected>Select Cooking Expertise</option>
-        <option value="Sometimes Cook">Sometimes Cook</option>
-        <option value="Cook Everyday">Cook Everyday</option>
-        <option value="Cooking is a Hobby">Cooking is a Hobby</option>
-        <option value="Professional Chef">Professional Chef</option>
-      </select>
+        <input type="submit" value="Submit Review">
 
-      <br>
+      </form>
+    </section>
+  </div>
 
-      <label for="review">Review
-        <textarea id="review" name="review" rows="10" cols="40">  </textarea>
-      </label>
-
-      <br>
-
-      <input type="submit" value="Submit Review">
-
-    </form>
-  </section>
 
   <footer>
     <p>This recipe originated from Yoda</p>
