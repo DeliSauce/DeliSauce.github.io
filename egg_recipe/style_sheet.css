@@ -1,0 +1,77 @@
+body {
+  /* If the user cannot load the Arial font, the sans-serif font is used */
+  font-family: Arial, sans-serif;
+  background-color: beige;
+}
+
+header > img {
+  width: 100px;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+.ingredients-list {
+  list-style: square inside;
+}
+
+ol {
+  list-style: upper-roman;
+}
+
+/* This selector selects ALL anchor tag children of ALL list elements that
+are children of an Unordered List element */
+ul li a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/*could not get the stars to show up*/
+input[type="radio"] {
+  cursor: pointer;
+  outline: none;
+  -webkit-appearance: none;
+  width: 27px;
+  height: 27px;
+  background-image: url(stars.png);
+  vertical-align: bottom;
+}
+
+/*need to include this because our stars.png is actually all three star color
+so we need to offset to show only the gold star.*/
+input[type="radio"]:checked {
+  background-position: 60px 60px;
+}
+
+
+input[type="submit"] {
+  cursor: pointer;
+  outline: none;
+}
+
+select {
+  cursor: pointer;
+  outline: none;
+}
+
+form input:last-child {
+  background-color: gold;
+}
+
+form input:last-child:hover {
+  -webkit-filter: brightness(50%);
+}
+
+/*color every other item in the directions list*/
+ol li:nth-of-type(2n) {
+  background: whitesmoke;
+}
+
+h2 + .user_review {
+  border-top: 1px solid black;
+}

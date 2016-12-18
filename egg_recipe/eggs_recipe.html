@@ -20,8 +20,11 @@
   <!-- link to JS file for the form submission -->
   <script type="text/javascript" src="external_javascript_example.js"> </script>
 
-  <!-- link to our CSS stylesheet -->
-  <link rel="stylesheet" href="style.css" type="text/css">
+  <!-- link to our CSS stylesheets -->
+  <!-- <link rel="stylesheet" href="css_reset.css" type="text/css"> -->
+  <link rel="stylesheet" href="css_custom_reset.css" type="text/css">
+  <link rel="stylesheet" href="style_sheet.css" type="text/css">
+
 </head>
 <body>
 
@@ -40,7 +43,7 @@
   <aside>
     <h2><a name="Ingredients"/>Ingredients</h2>
 
-      <ul>
+      <ul class="ingredients-list">
         <li>Eggs</li>
         <li>Salt</li>
         <li>Pepper</li>
@@ -76,7 +79,7 @@
       <p>recipe author: Peter Delfausse</p>
   </section>
 
-  <section id="reviews">
+  <section id="reviews" class="review_element">
     <h2>Reviews</h2>
     <form action="/reviews" method="post" id="review-form">
       <label for="reviewer-name">Reviewer Name</label>
@@ -116,7 +119,7 @@
   </section>
 
   <footer>
-    <p>This recipe originated from my mother</p>
+    <p>This recipe originated from Yoda</p>
   </footer>
 </body>
 </html>
