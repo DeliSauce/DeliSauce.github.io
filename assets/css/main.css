@@ -2009,14 +2009,12 @@
 
 				.image.thumb,
 				.image.thumb > .github,
-				.image.thumb > .live,
-				.image.thumb > .ghonly {
+				.image.thumb > .live {
 					text-align: center;
 				}
 
 					.image.thumb > .github:after,
-					.image.thumb > .live:after,
-					.image.thumb > .ghonly:after {
+					.image.thumb > .live:after {
 						-moz-transition: opacity 0.2s ease-in-out;
 						-webkit-transition: opacity 0.2s ease-in-out;
 						-ms-transition: opacity 0.2s ease-in-out;
@@ -2038,8 +2036,7 @@
 						width: 4em;
 					}
 
-					.image.thumb > .github:after,
-					.image.thumb > .ghonly:after {
+					.image.thumb > .github:after {
 						content: 'GitHub';
 					}
 
@@ -2054,28 +2051,20 @@
 						top: 50%;
 					}
 
-					.image.thumb > .ghonly:after {
-						left: 50%;
-						top: 50%;
-					}
-
 					.github:hover:after,
-					.live:hover:after,
-					.ghonly:hover:after {
+					.live:hover:after {
 						background-color: rgba(255, 165, 0, 0.2);
 					}
 
 					.image.thumb:hover:after,
 					.image.thumb:hover > .github:after,
-					.image.thumb:hover > .live:after,
-					.image.thumb:hover > .ghonly:after {
+					.image.thumb:hover > .live:after {
 						opacity: 1.0;
 					}
 
 					.image.thumb:hover:before,
 					.image.thumb:hover > .github:before,
-					.image.thumb:hover > .live:before,
-					.image.thumb:hover > .ghonly:before {
+					.image.thumb:hover > .live:before {
 						background: url("images/overlay.png"), url("images/overlay.png");
 						opacity: 1.0;
 					}
