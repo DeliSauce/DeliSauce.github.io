@@ -2128,7 +2128,6 @@
 				position: relative;
 				margin: 1em;
 				flex: 0 0 50px;
-				border: red 1px solid;
 			}
 
 			.skill.fit img {
@@ -2174,7 +2173,6 @@
 				text-align: center;
 				text-decoration: none;
 				white-space: nowrap;
-				border: red 1px solid;
 				width: 6em;
 			}
 
@@ -2215,6 +2213,7 @@
 			.skill:after {
 				left: 0%;
 				top: 100%;
+				transform: translate(-25%, 0%);
 			}
 
 			.skill:hover:after{
