@@ -26,10 +26,12 @@
 		</script>
 
 		<script type="text/javascript">
-			function googAnalytics(link) {
-				console.log(link);
-				ga('send', 'event', 'Live-Link', 'Click', link);
-				return false;
+			function eventAnalytics(label) {
+				let eventCategory = label.slice(0, label.indexOf('-'));
+				let eventAction = 'click'
+				console.log(eventCategory);
+				ga('send', 'event', eventCategory, eventAction, label);
+				return true;
 			}
 		</script>
 
@@ -89,8 +91,8 @@
 						<div class="row">
 							<article class="6u 12u$(xsmall) work-item">
 								<figure class="image fit thumb">
-									<a href="http://www.sheeple.co" onClick="return googAnalytics('sheeple-live')" class="live" target="_blank"></a>
-									<a href="https://github.com/DeliSauce/Sheeple" id="sheeple-gitlink" class="github" target="_blank"></a>
+									<a href="http://www.sheeple.co" onClick="return eventAnalytics('live-sheeple')" class="live" target="_blank"></a>
+									<a href="https://github.com/DeliSauce/Sheeple" onClick="return eventAnalytics('git-sheeple')" class="github" target="_blank"></a>
 									<!-- screenshot dimensions: 1,121 to 1275, 675 -->
 									<img src="images/thumbs/sheeple-screenshot.png" alt="" />
 								</figure>
@@ -101,8 +103,8 @@
 								<figure class="image fit thumb">
 									<!-- screenshot dimensions: 1,121 to 1275, 675 -->
 									<img src="images/thumbs/emojicloud-screenshot.png" alt="">
-										<a href="http://emojicloud.herokuapp.com/" class="live" target="_blank"></a>
-										<a href="https://github.com/theleesamuel/emojicloud" class="github" target="_blank"></a>
+										<a href="http://emojicloud.herokuapp.com/" onClick="return eventAnalytics('live-emoji')" class="live" target="_blank"></a>
+										<a href="https://github.com/theleesamuel/emojicloud" onClick="return eventAnalytics('git-emoji')" class="github" target="_blank"></a>
 									</img>
 								</figure>
 								<h3><a href="http://emojicloud.herokuapp.com/">EmojiCloud</a></h3>
@@ -112,8 +114,8 @@
 								<figure class="image fit thumb">
 									<!-- screenshot dimensions: 1,121 to 1275, 675 -->
 									<img src="images/thumbs/fibonacci-screenshot.png" alt="">
-										<a href="https://delisauce.github.io/Fibonacci_144" class="live" target="_blank"></a>
-										<a href="https://github.com/DeliSauce/Fibonacci_144/tree/gh-pages" class="github" target="_blank"></a>
+										<a href="https://delisauce.github.io/Fibonacci_144" onClick="return eventAnalytics('live-fibonacci')" class="live" target="_blank"></a>
+										<a href="https://github.com/DeliSauce/Fibonacci_144/tree/gh-pages" onClick="return eventAnalytics('git-fibonacci')" class="github" target="_blank"></a>
 									</img>
 								</figure>
 
