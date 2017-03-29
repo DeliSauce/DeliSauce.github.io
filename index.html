@@ -24,7 +24,15 @@
 		  ga('send', 'pageview');
 
 		</script>
-		
+
+		<script type="text/javascript">
+			function googAnalytics(link) {
+				console.log(link);
+				ga('send', 'event', 'Live-Link', 'Click', link);
+				return false;
+			}
+		</script>
+
 	</head>
 	<body id="top">
 
@@ -81,8 +89,8 @@
 						<div class="row">
 							<article class="6u 12u$(xsmall) work-item">
 								<figure class="image fit thumb">
-									<a href="http://www.sheeple.co" class="live" target="_blank"></a>
-									<a href="https://github.com/DeliSauce/Sheeple" class="github" target="_blank"></a>
+									<a href="http://www.sheeple.co" onClick="return googAnalytics('sheeple-live')" class="live" target="_blank"></a>
+									<a href="https://github.com/DeliSauce/Sheeple" id="sheeple-gitlink" class="github" target="_blank"></a>
 									<!-- screenshot dimensions: 1,121 to 1275, 675 -->
 									<img src="images/thumbs/sheeple-screenshot.png" alt="" />
 								</figure>
