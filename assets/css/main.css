@@ -2134,6 +2134,9 @@
 
 			.skill.fit img {
 				width: 100%;
+				height: 50px;
+				/*border: solid 1px;
+				border-color: black;*/
 			}
 
 
@@ -2187,8 +2190,14 @@
 			.skill.react:after {
 				content: 'React';
 			}
+			.skill.redux:after {
+				content: 'Redux';
+			}
 			.skill.postgresql:after {
 				content: 'PostgreSQL';
+			}
+			.skill.firebase:after {
+				content: 'Firebase';
 			}
 			.skill.jquery:after {
 				content: 'JQuery';
