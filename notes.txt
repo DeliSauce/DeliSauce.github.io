@@ -1,7 +1,10 @@
-1) capture mp4 of website with Giphy Capture app
+1) capture mp4 of website with Giphy Capture app (save as 320px and standard)
+  - or use Quicktime and choose "New Screen Recording" (seems buggy)
 2) upload video file to cloudinary and convert to gif
-      - reduce file quality (80%?)
-      - view full size link and add "e_loop/" after "video/upload/"
-        so that gif loops
+    - reduce file quality (80%?)
+    - view full size link and add "e_loop/" after "video/upload/"
+      so that gif loops
 
-image size should be approximately: 360 x 190 for the thumbnails
+- image size should be approximately: 360 x 190 for the thumbnails
+- HTML 5 also has a video tag that can play mp4 files but I found that
+  it would flicker when looping.
